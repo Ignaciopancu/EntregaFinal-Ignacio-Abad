@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from django.template import Context,Template
 
 
+def index(request):
+    return render(request,"home/index.html")
 
 def saludo(request):
     return HttpResponse("Hola operadores del Derecho!!")

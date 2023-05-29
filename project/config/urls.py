@@ -22,8 +22,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("saludar", views.saludo),
-    path("nombre/<nombre>/<apellido>/", views.nombre),
-    path("Templates", views.probando_template_render),
-    path('Formulario', views.Formulario, name='Formulario'),
+    path("", include(("app.urls", "app"))),
     ]
